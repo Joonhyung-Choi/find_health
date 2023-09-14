@@ -8,6 +8,8 @@
 ## 개발 환경 및 기술 스택
 - 개발 환경 : vscode
 - 기술 스택 : next.js, typescript
+- 버전 관리 : git, github
+- 페이지 설계 및 디자인 : figma
 - 배포 : aws ec2
 - 사용 API
 <table>
