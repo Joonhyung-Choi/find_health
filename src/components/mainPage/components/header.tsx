@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useRouter } from "next/navigation";
+
 export default function Header() {
+  const router = useRouter();
+
   return (
     <Wrapper>
       <Logo>
@@ -9,8 +13,12 @@ export default function Header() {
         Health
       </Logo>
       <NavigationDiv>
-        <NavigationButton>약국 검색</NavigationButton>
-        <NavigationButton>병원 검색</NavigationButton>
+        <NavigationButton onClick={() => router.push("/map")}>
+          약국 검색
+        </NavigationButton>
+        <NavigationButton onClick={() => router.push("/findHospital")}>
+          병원 검색
+        </NavigationButton>
       </NavigationDiv>
     </Wrapper>
   );
@@ -43,6 +51,9 @@ const NavigationDiv = styled.div`
   width: 320px;
   height: 100%;
   margin-right: 50px;
+  :hover {
+    font-weight: bold;
+  }
 `;
 
 const NavigationButton = styled.a`

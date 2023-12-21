@@ -1,11 +1,12 @@
 "use client";
-import MapPage from "@/components/mapPage/mapPage";
+import FindHospitalPage from "@/components/findHospitalPage/findHospitalPage";
+import React from "react";
 import styled from "styled-components";
 
-export default function Map() {
+export default function FindHospital() {
   return (
     <Wrapper>
-      <MapPage />;
+      <FindHospitalPage />
     </Wrapper>
   );
 }

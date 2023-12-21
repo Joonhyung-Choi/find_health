@@ -3,14 +3,18 @@ import styled from "styled-components";
 import Image from "next/image";
 import Example from "../../../../public/example.svg";
 import ContentsInformation from "./contentsInformation";
+import { useRouter } from "next/navigation";
 
 export default function HospitalContents() {
+  const router = useRouter();
   return (
     <Wrapper>
       <ContentsInformation
-        coment1="내 증상에 맞는 병원을 찾아드려요"
+        coment1="증상 부위를 통해 알맞은 병원을 추천해드려요"
         coment2="내 질환에 맞춰 어떤 병원을 가야되는지 알려드려요"
-        onClickShortcut={() => {}}
+        onClickShortcut={() => {
+          router.push("/findHospital");
+        }}
       ></ContentsInformation>
       <ImageWrapper>
         <Image src={Example} alt="Example SVG" fill />

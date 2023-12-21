@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 export default function Footer() {
+  const GITHUBURL = "https://github.com/Joonhyung-Choi/find_health";
+  const EMAIL = "joonhyungaaa@gmail.com";
+  const APIINFORMAION =
+    "국립중앙의료원 전국 약국 정보 조회 서비스, 건강보험심사평가원 병원정보서비스";
   return (
     <Wrapper>
       <InformationDiv>
-        <Information>깃허브 주소 :</Information>
-        <Information>이메일 :</Information>
-        <Information>api 정보 :</Information>
+        <Information>깃허브 주소: {GITHUBURL}</Information>
+        <Information>이메일: {EMAIL}</Information>
+        <Information>api 정보: {APIINFORMAION}</Information>
       </InformationDiv>
     </Wrapper>
   );

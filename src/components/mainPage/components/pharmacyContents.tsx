@@ -3,8 +3,10 @@ import styled from "styled-components";
 import Image from "next/image";
 import Example from "../../../../public/example.svg";
 import ContentsInformation from "./contentsInformation";
+import { useRouter } from "next/navigation";
 
 export default function PharmacyContents() {
+  const router = useRouter();
   return (
     <Wrapper>
       <ImageWrapper>
@@ -13,9 +15,10 @@ export default function PharmacyContents() {
       <ContentsInformation
         coment1="간단하게 내 주변 약국을 찾아보세요"
         coment2="약국의 상세 정보를 확인해보세요"
-        onClickShortcut={() => {}}
+        onClickShortcut={() => {
+          router.push("/map");
+        }}
       ></ContentsInformation>
-
     </Wrapper>
   );
 }
@@ -40,4 +43,3 @@ const ImageWrapper = styled.div`
     height: 350px;
   }
 `;
-

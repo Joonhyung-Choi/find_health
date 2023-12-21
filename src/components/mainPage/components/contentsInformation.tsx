@@ -17,7 +17,7 @@ export default function ContentsInformation({
         <Coment>{coment2}</Coment>
       </ComentDiv>
 
-      <ShortcutA>바로가기</ShortcutA>
+      <ShortcutA onClick={onClickShortcut}>바로가기 →</ShortcutA>
     </Wrapper>
   );
 }
@@ -52,4 +52,5 @@ const ShortcutA = styled.a`
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  cursor: pointer;
 `;
